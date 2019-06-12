@@ -1,6 +1,7 @@
 package com.example.filepersistencetest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.edit);
         Button buttonW=findViewById(R.id.write_text);
         Button buttonR=findViewById(R.id.read_text);
+        Button buttonF=findViewById(R.id.sharedPreferenceTest);
         buttonW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
                     editText.setSelection(inputText.length());
                     Toast.makeText(MainActivity.this,"Restoring succeeded",Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        buttonF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SharedPreferencesTest.class);
+                startActivity(intent);
+
             }
         });
 
