@@ -6,4 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".SharedPreferencesTest">
 
+    <Button
+        android:id="@+id/save_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:text="写入数据"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/read_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="读取数据"
+        app:layout_constraintTop_toBottomOf="@+id/save_data"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="姓名 :"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="姓名"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/textViewName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="年龄 :"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editTextAge"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="年龄"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAge"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/textViewAge"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewMarried"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="是否已婚:"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editTextAge"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupMarried"
+        android:layout_width="0dp"
+        android:layout_height="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMarried"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/textViewMarried"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewMarried"
+        app:layout_constraintVertical_bias="0.0"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="已婚"
+            app:layout_constraintBottom_toBottomOf="@+id/radioButtonYes"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonYes"
+            app:layout_constraintTop_toTopOf="@+id/radioButtonYes"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="未婚"
+            app:layout_constraintBottom_toBottomOf="@+id/radioButtonYes"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonYes"
+            app:layout_constraintTop_toTopOf="@+id/radioButtonYes"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/BroadBestPractice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="跳转至实现记住密码功能界面"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
