@@ -28,6 +28,7 @@ public class BroadcastBestPractice extends AppCompatActivity {
         accountEdit = findViewById(R.id.name);
         passwordEdit = findViewById(R.id.password);
         rememberPass = findViewById(R.id.remember_pass);
+        nextActivity = findViewById(R.id.nextActivity);
         login = findViewById(R.id.login);
         nextActivity = findViewById(R.id.nextActivity);
         boolean isRemember = preferences.getBoolean("remember_password",false);
@@ -61,6 +62,12 @@ public class BroadcastBestPractice extends AppCompatActivity {
                 }
             }
         });
-
+        nextActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BroadcastBestPractice.this,DatabaseTest.class);
+                startActivity(intent);
+            }
+        });
     }
 }
