@@ -18,9 +18,34 @@
         android:id="@+id/add_database"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="添加数据"
         app:layout_constraintTop_toBottomOf="@+id/create_database"
         tools:layout_editor_absoluteX="0dp" />
+    <Button
+        android:id="@+id/update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="更新数据"
+        app:layout_constraintTop_toBottomOf="@+id/add_database"
+        tools:layout_editor_absoluteX="0dp" />
 
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="删除数据"
+        app:layout_constraintTop_toBottomOf="@+id/update_data"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="查询数据"
+        app:layout_constraintTop_toBottomOf="@+id/delete_data"
+        tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>
