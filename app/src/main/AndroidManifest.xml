@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DatabaseTest"></activity>
+        <provider
+            android:name=".DatabaseProvider"
+            android:authorities="com.example.filepersistencetest.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity android:name=".DatabaseTest" />
         <activity android:name=".CloseAllActivity" />
         <activity android:name=".BroadcastBestPractice" />
         <activity android:name=".SharedPreferencesTest" />
